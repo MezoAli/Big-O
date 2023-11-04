@@ -17,11 +17,30 @@
 
 // findNemo(largeArray); // o(n) => linear time
 
-const boxes = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+// const boxes = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-const printFirst2Boxes = (boxes) => {
-  console.log(boxes[0]);
-  console.log(boxes[1]);
+// const printFirst2Boxes = (boxes) => {
+//   console.log(boxes[0]);
+//   console.log(boxes[1]);
+// };
+
+// printFirst2Boxes(boxes); // o(1) => const time
+
+// FIRST CHALLANGE
+const anotherFunction = () => {};
+
+const funChallenge = (inputs) => {
+  let a = 10; // o(1)
+  a = 50 + 3; // o(1)
+
+  for (let i = 0; i < inputs.length; i++) {
+    //o(n)
+    anotherFunction(); //o(n)
+    let stranger = true; //o(n)
+    a++; //o(n)
+  }
+  return a; //o(1)
 };
 
-printFirst2Boxes(boxes); // o(1) => const time
+console.log(funChallenge([1, 2, 3, 4, 5, 6])); // o(3 + 4n) => o(n)
+console.log(funChallenge([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // o(3 + 4n) => o(n)
